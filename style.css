@@ -1,0 +1,106 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    --s: 60px;
+    --c1: #355C7D;
+    --c2: #6C5B7B;
+    --_g: radial-gradient(
+      25% 25% at 25% 25%,
+      var(--c1) 99%,
+      rgba(0, 0, 0, 0) 101%
+    );
+    background: var(--_g) var(--s) var(--s) / calc(2 * var(--s))
+        calc(2 * var(--s)),
+      var(--_g) 0 0 / calc(2 * var(--s)) calc(2 * var(--s)),
+      radial-gradient(50% 50%, var(--c2) 98%, #00000000) 0 0 / var(--s)
+        var(--s),
+      repeating-conic-gradient(var(--c2) 0 50%, var(--c1) 0 100%)
+        calc(0.5 * var(--s)) 0 / calc(2 * var(--s)) var(--s);
+  }
+  h1 {
+    font-family: 'Luckiest Guy', cursive;
+    margin-bottom: 0.3rem;
+    font-size: 4rem;
+    color: #fbb1c6;
+    letter-spacing: 4px;
+    text-align: center;
+  }
+  
+  p {
+    font-family: 'Italianno';
+    margin-bottom: 0.3rem;
+    font-size: 2rem;
+    color: #fcfcfc;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+
+  button {
+    border: none;
+    padding: 0.75em;
+    background: #0083B0;
+    color: white;
+    border-radius: 999px;
+    font-size: 1.2rem;
+    font-family: monospace;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  button:hover {
+    background: #01aae2;
+  }
+  
+  @media screen and (max-width: 700px) {
+    h1 {
+      font-size: 3rem;
+    }
+    button {
+      font-size: 1rem;
+    }
+  }
+  .btn {
+    outline: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #00B4DB;
+    min-width: 200px;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
+    box-sizing: border-box;
+    padding: 16px 20px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 10px;
+  }
+  
+  .btn:hover {
+    opacity: .95;
+  }
+  
+  .btn .animation {
+    border-radius: 100%;
+    animation: ripple 0.6s linear infinite;
+  }
+ 
+  @keyframes ripple {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);
+    }
+  
+    100% {
+      box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);
+    }
+  }
+ 
